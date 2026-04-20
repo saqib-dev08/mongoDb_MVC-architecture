@@ -5,10 +5,10 @@ env.config();
 
 try {
 
-    const connectDb = async() => {
-        let connect = await mongoose.connect(process.env.MONGO_URI);
+   export const connectDb = async () => {
+        let con = await mongoose.connect(process.env.MONGO_URI);
 
-        console.log("Db is connected!");
+        console.log("Db is connected!", con.connection.host);
         
     }
 
